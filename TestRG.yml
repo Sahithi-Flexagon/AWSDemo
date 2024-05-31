@@ -4,8 +4,10 @@ Description: Test Resource Group..
 Parameters:    
   RGText:
     Type: 'AWS::SSM::Parameter::Value<String>'
+    Default: RGParam
   RGTextOne:
     Type: 'AWS::SSM::Parameter::Value<String>'
+    Default: RGParam
 Resources:
   ResourceGroup:
     Type: AWS::ResourceGroups::Group
