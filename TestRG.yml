@@ -4,6 +4,10 @@ Description: Test Resource Group..
 Parameters:    
   RGText:
     Type: String
+    Default: FDResourceGroup
+  RGTextOne:
+    Type: String
+    Default: FDResourceGroups
 Resources:
   ResourceGroup:
     Type: AWS::ResourceGroups::Group
