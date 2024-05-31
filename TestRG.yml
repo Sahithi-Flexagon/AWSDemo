@@ -1,89 +1,12 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "The template used to create an ECS Service from the ECS Console.",
-  "Parameters": {
-    "ECSClusterName": {
-      "Type": "String",
-      "Default": "nginx-demo-cluster"
-    },
-    "SecurityGroupIDs": {
-      "Type": "CommaDelimitedList",
-      "Default": "sg-0c8d6c966cc312839"
-    },
-    "SubnetIDs": {
-      "Type": "CommaDelimitedList",
-      "Default": ""
-    },
-    "VpcID": {
-      "Type": "String",
-      "Default": "vpc-01ed5622d54bb6f71"
-    },
-    "LoadBalancerName": {
-      "Type": "String",
-      "Default": "nginx-demo-lb"
-    }
-  },
+  "Description": "The template used to create a stack from FDTLT88",
   "Resources": {
-    "ECSService": {
-      "Type": "AWS::ECS::Service",
+    "DemoResourceGroup": {
+      "Type": "AWS::ResourceGroups::Group",
       "Properties": {
-        "Cluster": "nginx-demo-cluster",
-        "TaskDefinition": "arn:aws:ecs:us-east-1:898334718399:task-definition/sinatra-hi:1",
-        "LaunchType": "EC2",
-        "ServiceName": "nginx-svc",
-        "SchedulingStrategy": "REPLICA",
-        "DesiredCount": 1,
-        "LoadBalancers": [
-          {
-            "ContainerName": "web",
-            "ContainerPort": 4567,
-            "LoadBalancerName": {
-              "Ref": "AWS::NoValue"
-            },
-            "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:898334718399:targetgroup/nginx-target/7e300cf29dd286a7"
-          }
-        ],
-        "DeploymentConfiguration": {
-          "MaximumPercent": 200,
-          "MinimumHealthyPercent": 100,
-          "DeploymentCircuitBreaker": {
-            "Enable": true,
-            "Rollback": true
-          }
-        },
-        "DeploymentController": {
-          "Type": "ECS"
-        },
-        "ServiceConnectConfiguration": {
-          "Enabled": false
-        },
-        "PlacementStrategies": [
-          {
-            "Field": "attribute:ecs.availability-zone",
-            "Type": "spread"
-          },
-          {
-            "Field": "instanceId",
-            "Type": "spread"
-          }
-        ],
-        "PlacementConstraints": [],
-        "Tags": [],
-        "EnableECSManagedTags": true
-      }
-    }
-  },
-  "Outputs": {
-    "ClusterName": {
-      "Description": "The cluster used to create the service.",
-      "Value": {
-        "Ref": "ECSClusterName"
-      }
-    },
-    "ECSService": {
-      "Description": "The created service.",
-      "Value": {
-        "Ref": "ECSService"
+        "Name": "DemoResourceGroup",
+        "Description": "test resource group"
       }
     }
   }
