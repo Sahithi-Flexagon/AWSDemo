@@ -4,7 +4,7 @@ Description: Test Resource Group..
 Parameters:    
   RGText:
     Type: 'AWS::SSM::Parameter::Value<String>'
-  RGText:
+  RGTextOne:
     Type: 'AWS::SSM::Parameter::Value<String>'
 Resources:
   ResourceGroup:
