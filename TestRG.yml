@@ -1,13 +1,12 @@
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "The template used to create a stack from FDTLT88",
-  "Resources": {
-    "DemoResourceGroup": {
-      "Type": "AWS::ResourceGroups::Group",
-      "Properties": {
-        "Name": "DemoResourceGroup",
-        "Description": "test resource group"
-      }
-    }
-  }
-}
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Test Resource Group..
+Parameters:    
+  RGText:
+    Type: String
+Resources:
+  ResourceGroup:
+    Type: AWS::ResourceGroups::Group
+    Properties:
+      Name: !Ref RGText
+      Description: A test resource group that is created by FD12
