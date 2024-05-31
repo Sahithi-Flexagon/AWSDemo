@@ -3,11 +3,9 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: Test Resource Group..
 Parameters:    
   RGText:
-    Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: RGParam
+    Type: String
   RGTextOne:
-    Type: 'AWS::SSM::Parameter::Value<String>'
-    Default: RGParam
+    Type: String
 Resources:
   ResourceGroup:
     Type: AWS::ResourceGroups::Group
