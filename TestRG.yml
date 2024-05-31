@@ -3,8 +3,8 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: Test Resource Group..
 Parameters:    
   RGText:
-    Type: String
-    Default: FDResourceGroup
+    Type: 'AWS::SSM::Parameter::Value<String>'
+    Default: RGParam
 Resources:
   ResourceGroup:
     Type: AWS::ResourceGroups::Group
