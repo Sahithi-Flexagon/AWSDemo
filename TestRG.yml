@@ -4,7 +4,7 @@ Description: Test Resource Group..
 Parameters:    
   RGText:
     Type: String
-    Default: UsePreviousValue
+    Default: true
 Resources:
   ResourceGroup:
     Type: AWS::ResourceGroups::Group
