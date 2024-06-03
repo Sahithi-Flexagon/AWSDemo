@@ -3,8 +3,8 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: Test Resource Group..
 Parameters:    
   RGText:
-    Type: String
-    Default: true
+    Type: UsePreviousValue
+    Default: String
 Resources:
   ResourceGroup:
     Type: AWS::ResourceGroups::Group
