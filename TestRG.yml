@@ -1,14 +1,13 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'Test Resource Group..'
+
+Description: Test Resource Group..
+Parameters:    
+  RGText:
+    Type: String
 Resources:
   ResourceGroup:
-    Type: "AWS::ResourceGroups::Group" 
+    Type: AWS::ResourceGroups::Group
     Properties:
-      Name: "TestFDResourceGroup"
-      Description: "A test resource group that is created by FD12"
-      Configuration:
-      - Type: "AWS::EC2::HostManagement"
-        Parameters:
-          - Name: "allowed-resource-types"
-            Values:
-              - "AWS::EC2::Instance"
+      Name: !Ref RGText
+      Value: UsePreviousValue
+      Description: A test resource group that is created by FD12
