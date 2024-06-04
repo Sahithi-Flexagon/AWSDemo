@@ -10,5 +10,4 @@ Resources:
     Type: AWS::ResourceGroups::Group
     Properties:
       Name: !Ref RGText
-      Value: UsePreviousValue
       Description: A test resource group that is created by FD12
