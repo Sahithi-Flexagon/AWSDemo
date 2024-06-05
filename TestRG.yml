@@ -6,6 +6,10 @@ Parameters:
     Type: String
   RGTextOne:
     Type: String
+  RGTextTwo:
+    Type: String
+  RGTextThree:
+    Type: String
 Resources:
   ResourceGroup:
     Type: AWS::ResourceGroups::Group
