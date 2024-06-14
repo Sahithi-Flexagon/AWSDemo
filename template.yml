@@ -1,6 +1,6 @@
-AWSTemplateFormatVersion: '2024-06-06'
+AWSTemplateFormatVersion: '2010-09-09'
 
-Description: Test Create and Update Stack..
+Description: Test Create and Update Stack.
 Parameters:    
   param1:
     Type: String
