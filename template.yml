@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2024-06-06'
+
+Description: Test Create and Update Stack..
+Parameters:    
+  param1:
+    Type: String
+  param2:
+    Type: String
+  param3:
+    Type: String
+  param4:
+    Type: String
+Resources:
+  ResourceGroup:
+    Type: AWS::ResourceGroups::Group
+    Properties:
+      Name: !Ref template
+      Description: A test resource group that is created by Sahithi
