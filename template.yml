@@ -14,5 +14,5 @@ Resources:
   ResourceGroup:
     Type: AWS::ResourceGroups::Group
     Properties:
-      Name: !Ref template
+      Name: !Ref param1
       Description: A test resource group that is created by Sahithi
